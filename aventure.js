@@ -1,2 +1,4 @@
 // Mode Aventure de Pokémon LOC22
-console.log("Mode Aventure chargé !");
+document.addEventListener("DOMContentLoaded", () => {
+    alert("✨ Bienvenue dans Pokémon LOC22 ! ✨");
+});
