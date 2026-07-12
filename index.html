@@ -1,22 +1,264 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOC22 Pokémon Gaming</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LOC22 Pokémon Gaming</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#1b1b1b;
+color:white;
+}
+
+header{
+background:#e53935;
+padding:20px;
+text-align:center;
+font-size:30px;
+font-weight:bold;
+}
+
+#profil{
+background:#2d2d2d;
+margin:20px;
+padding:20px;
+border-radius:15px;
+}
+
+#profil h2{
+margin-bottom:10px;
+}
+
+#profil p{
+margin:6px 0;
+}
+
+.menu{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+padding:20px;
+}
+
+button{
+background:#ffcb05;
+color:black;
+font-size:18px;
+font-weight:bold;
+border:none;
+border-radius:15px;
+padding:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+background:#ffd93b;
+transform:scale(1.03);
+}
+
+footer{
+margin-top:30px;
+padding:20px;
+text-align:center;
+background:#111;
+}
+
+.page{
+display:none;
+padding:20px;
+}
+
+.active{
+display:block;
+}
+
+</style>
+
 </head>
+
 <body>
 
-    <h1>LOC22 Pokémon Gaming</h1>
+<header>
+LOC22 Pokémon Gaming
+</header>
 
-    <p>Bienvenue sur le jeu Pokémon multijoueur créé par LOC22.</p>
+<div id="accueil" class="page active">
 
-    <button>Jouer</button>
-    <button>Classe</button>
-    <button>Amical</button>
-    <button>Équipe aléatoire</button>
-    <button>Amis</button>
-    <button>Équipes</button>
+<div id="profil">
+
+<h2>👤 Profil</h2>
+
+<p><b>Pseudo :</b> Dresseur</p>
+
+<p><b>Niveau :</b> 1</p>
+
+<p><b>Points :</b> 0</p>
+
+<p><b>Prochain niveau :</b> 50 points</p>
+
+</div>
+
+<div class="menu">
+
+<button onclick="ouvrir('jouer')">
+🎮 Jouer
+</button>
+
+<button onclick="ouvrir('classement')">
+🏆 Classement
+</button>
+
+<button onclick="ouvrir('profilPage')">
+👤 Profil
+</button>
+
+<button onclick="ouvrir('amis')">
+👥 Amis
+</button>
+
+<button onclick="ouvrir('club')">
+🛡️ Clubs
+</button>
+
+<button onclick="ouvrir('aleatoire')">
+🎲 Équipe aléatoire
+</button>
+
+</div>
+
+</div>
+<div id="jouer" class="page">
+
+<h1>🎮 Jouer</h1>
+
+<p>Choisissez un mode de jeu.</p>
+
+<br>
+
+<button>🏆 Classé</button>
+
+<button>🤝 Amical</button>
+
+<button>🎲 Équipe aléatoire</button>
+
+<button>⬅ Retour</button>
+
+</div>
+
+
+<div id="classement" class="page">
+
+<h1>🏆 Classement</h1>
+
+<p>Les meilleurs joueurs apparaîtront ici.</p>
+
+<br>
+
+<p>🥇 Aucun classement pour le moment.</p>
+
+<button>⬅ Retour</button>
+
+</div>
+
+
+<div id="profilPage" class="page">
+
+<h1>👤 Profil</h1>
+
+<p>Pseudo : Dresseur</p>
+
+<p>Niveau : 1</p>
+
+<p>Points : 0</p>
+
+<p>Victoires : 0</p>
+
+<p>Défaites : 0</p>
+
+<p>Club : Aucun</p>
+
+<button>⬅ Retour</button>
+
+</div>
+
+
+<div id="amis" class="page">
+
+<h1>👥 Amis</h1>
+
+<button>➕ Ajouter un ami</button>
+
+<button>📨 Demandes d'amis</button>
+
+<p>Aucun ami pour le moment.</p>
+
+<button>⬅ Retour</button>
+
+</div>
+
+
+<div id="club" class="page">
+
+<h1>🛡 Clubs</h1>
+
+<button>➕ Créer un club</button>
+
+<button>🔎 Rejoindre un club</button>
+
+<p>Vous ne faites partie d'aucun club.</p>
+
+<button>⬅ Retour</button>
+
+</div>
+
+
+<div id="aleatoire" class="page">
+
+<h1>🎲 Équipe aléatoire</h1>
+
+<p>Recevez une équipe Pokémon aléatoire.</p>
+
+<button>🎲 Générer une équipe</button>
+
+<button>⬅ Retour</button>
+
+</div>
+
+<footer>
+
+LOC22 Pokémon Gaming © 2026
+
+</footer>
+
+<script>
+
+function ouvrir(page){
+
+const pages=document.querySelectorAll(".page");
+
+pages.forEach(function(p){
+
+p.classList.remove("active");
+
+});
+
+document.getElementById(page).classList.add("active");
+
+}
+
+</script>
 
 </body>
-</html>
+
+</html>    
