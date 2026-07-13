@@ -113,6 +113,32 @@ display:block;
 🔑 Connexion
 </button>
 </header>
+<div id="menuConnexion" style="display:none; background:#222; padding:20px;">
+
+    <button onclick="afficherConnexion()">
+        🔓 Se connecter
+    </button>
+
+    <button onclick="afficherInscription()">
+        📝 S'inscrire
+    </button>
+
+    <div id="connexion" style="display:none; margin-top:20px;">
+
+        <h2>Se connecter</h2>
+
+        <input type="text" id="pseudoConnexion" placeholder="Pseudo">
+
+        <input type="password" id="motdepasseConnexion" placeholder="Mot de passe">
+
+        <button onclick="connexion()">
+            Connexion
+        </button>
+     </div>
+</div>   
+
+
+
 
  <div class="compte">
   <h2>Créer un compte</h2>
